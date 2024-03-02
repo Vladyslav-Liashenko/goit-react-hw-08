@@ -2,7 +2,7 @@ import styled from './Contact.module.css';
 import userIcon from '../../../assets/person-fill.svg';
 import telIcon from '../../../assets/telephone-fill.svg';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from '../../../redux/operations';
+import { deleteContact } from '../../../redux/contacts/operations';
 
 export const Contact = ({ name, number, contactId }) => {
   const dispatch = useDispatch();
@@ -18,9 +18,7 @@ export const Contact = ({ name, number, contactId }) => {
           <span className={styled.info}>{number}</span>
         </a>
       </div>
-      <button onClick={() => dispatch(deleteContact(contactId))}>
-        Delete
-      </button>
+      <button onClick={() => dispatch(deleteContact(contactId))}>Delete</button>
     </div>
   );
 };
