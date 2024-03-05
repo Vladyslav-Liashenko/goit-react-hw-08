@@ -5,7 +5,7 @@ import { ContactList } from '../components/ContactList/ContactList';
 import { ContactForm } from '../components/ContactForm/ContactForm';
 import { TaskEditor } from '../components/ContactEditor/ContactEditor';
 import { SearchBox } from '../components/SearchBox/SearchBox';
-import { fetchTasks } from '../redux/tasks/operations';
+import { fetchContacts } from '../redux/contacts/operations';
 import { selectIsLoading, selectError } from '../redux/contacts/selectors';
 
 export default function Tasks() {
@@ -14,7 +14,7 @@ export default function Tasks() {
   const error = useSelector(selectError);
 
   useEffect(() => {
-    dispatch(fetchTasks());
+    dispatch(fetchContacts());
   }, [dispatch]);
 
   return (
