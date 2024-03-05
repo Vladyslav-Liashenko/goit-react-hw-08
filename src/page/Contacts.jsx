@@ -3,12 +3,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import DocumentTitle from '../components/DocumentTitle';
 import { ContactList } from '../components/ContactList/ContactList';
 import { ContactForm } from '../components/ContactForm/ContactForm';
-import { TaskEditor } from '../components/ContactEditor/ContactEditor';
+import { ContactEditor } from '../components/ContactEditor/ContactEditor';
 import { SearchBox } from '../components/SearchBox/SearchBox';
 import { fetchContacts } from '../redux/contacts/operations';
 import { selectIsLoading, selectError } from '../redux/contacts/selectors';
 
-export default function Tasks() {
+export default function Contacts() {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
@@ -21,7 +21,7 @@ export default function Tasks() {
     <>
       {isLoading && !error && <b>Loading...</b>}
       <DocumentTitle><h1>Phonebook</h1></DocumentTitle>
-      <TaskEditor />
+      <ContactEditor />
       <div>{isLoading && 'Request in progress...'}</div>
       <ContactForm />
       <ContactList />
