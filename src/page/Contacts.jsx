@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import DocumentTitle from '../components/DocumentTitle';
-import { ContactList } from './ContactList/ContactList';
-import { ContactForm } from './ContactForm/ContactForm';
+import { ContactList } from '../components/ContactList/ContactList';
+import { ContactForm } from '../components/ContactForm/ContactForm';
 import { TaskEditor } from '../components/TaskEditor/TaskEditor';
 import { SearchBox } from './SearchBox/SearchBox';
 import { fetchTasks } from '../redux/tasks/operations';
